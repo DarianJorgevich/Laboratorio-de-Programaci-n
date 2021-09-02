@@ -17,7 +17,7 @@ public class main {
     public static void main(String[] args) throws IOException {
         String resultado = "";
         long time = System.currentTimeMillis();
-        String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "The Dark Knight", "47 Ronin", "El Hoyo"};
+        String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "The Dark Knight", "47 Ronin", "El Hoyo", "superman", "inception", "batman 1"};
         
         
         System.out.println("\u001B[31m================Empieza descarga NO concurrente===============");
@@ -25,6 +25,12 @@ public class main {
              String aux = getMovie(title);
             System.out.println(aux);
         }
+//        String aux="";
+//        for (String title : titles) {
+//           aux+= getMovie(title) + "\n";
+//         }
+//        System.out.println(aux);
+        
         System.out.println("\u001B[31m================Termina descarga NO concurrente===============");
         System.out.println("Tiempo no concurrente : \u001B[31m"+(System.currentTimeMillis()-time));
         System.out.println("\n \n");
