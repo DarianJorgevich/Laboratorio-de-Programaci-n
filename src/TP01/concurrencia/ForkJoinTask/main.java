@@ -22,7 +22,7 @@ public class main {
         */
         String resultado = "";
         long time = System.currentTimeMillis();
-        String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "47 Ronin", "El Hoyo","2001: A Space Odyssey","The Dark Knight"};
+        String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "The Dark Knight", "47 Ronin", "El Hoyo", "superman", "inception", "batman 1"};
         /**
          * Inicialmente cargamos un arreglo que contiene los titulos de las 
          * peliculas de las que queremos conocer su información
@@ -33,10 +33,12 @@ public class main {
          * existente con respecto a ForkJoin + RecursiveTask primero realizamos 
          * la descarga de la información de cada pelicula de modo secuencial.
          */
+        String aux="";
         for (String title : titles) {
-             String aux = getMovie(title);
-            System.out.println(aux);
-        }
+           aux+= getMovie(title) + "\n";
+         }
+        System.out.println(aux);
+        
         System.out.println("\u001B[31m================Termina descarga NO concurrente===============");
         System.out.println("Tiempo no concurrente : \u001B[31m"+(System.currentTimeMillis()-time));
         /**
