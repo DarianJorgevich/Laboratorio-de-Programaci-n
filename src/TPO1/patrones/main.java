@@ -78,7 +78,7 @@ public class main {
                     menu1();
                     break;
                 case 2:
-                    String[] t = {"I am english", "Ich bin Deutscher", "je suis Français", "Ciao mondo", "Olá mundo, sou portugues", "Norsk skrevet tekst", "卵"};
+                    String[] t = {"卵", "I am english", "Ich bin Deutscher", "je suis Français", "buon pomeriggio ragazzi", "Olá mundo, sou portugues", "Norsk skrevet tekst"};
                     traducir(t);
                     break;
                 case 0:
