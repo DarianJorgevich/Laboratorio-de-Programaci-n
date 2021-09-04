@@ -3,22 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/home/darian/NetBeansProjects/lab/src/TP01/concurrencia/ForkJoinTask/utiles.java</file>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TP01/concurrencia/ForkJoinTask/DownloaderMovies.java</file>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TP01/concurrencia/ForkJoinTask/main.java</file>
-=======
             <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/Spotify/Artist.java</file>
-            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/utiles.java</file>
             <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/testBranch.java</file>
-            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TP01/concurrencia/ForkJoinTask/utiles.java</file>
-            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/Spotify/DownloaderArtists.java</file>
             <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/DownloaderMovies.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/patrones/Translator.java</file>
             <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/main.java</file>
-            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TP01/concurrencia/ForkJoinTask/main.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/patrones/TranslatorApp.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/patrones/FromGerman.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/utiles.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/patrones/main.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/Spotify/DownloaderArtists.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/patrones/FromEnglish.java</file>
+            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/patrones/Handler.java</file>
             <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TPO1/concurrencia/Spotify/ApiCall.java</file>
-            <file>file:/C:/Users/Lucas/Documents/GitHub/Laboratorio-de-Programaci-n/src/TP01/concurrencia/ForkJoinTask/DownloaderMovies.java</file>
->>>>>>> 5eff095e71cf13af13c268eb5b925ebe7a1ae370
         </group>
     </open-files>
 </project-private>
