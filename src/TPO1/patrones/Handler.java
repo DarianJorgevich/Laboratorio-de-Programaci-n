@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Darian y Juan
+ * @author Darian y Lucas
  */
 public interface Handler {
     public void setNext(Handler handler);

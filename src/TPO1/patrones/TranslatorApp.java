@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Darian y Juan
+ * @author Darian y Lucas
  * Orden de la cadena segun idiomas mas hablados:
  * https://es.wikipedia.org/wiki/Anexo:Idiomas_por_el_total_de_hablantes
  */

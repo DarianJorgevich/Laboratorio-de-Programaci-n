@@ -11,7 +11,7 @@ import java.util.concurrent.ForkJoinPool;
 
 /**
  *
- * @author darian
+ * @author darian y lucas
  */
 public class main {
     public static void main(String[] args) throws IOException {

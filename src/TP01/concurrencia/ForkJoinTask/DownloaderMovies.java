@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author darian
+ * @author darian y lucas
  */
 
 public class DownloaderMovies extends RecursiveTask<String>{
