@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Darian y Juan
+ * @author Darian y Lucas
  */
 public class FromPortuguese implements Handler{
     private Handler next;

@@ -13,7 +13,7 @@ import java.net.URL;
 
 /**
  *
- * @author darian
+ * @author darian y lucas
  */
 public class utiles {
     public static String  getMovie(String title) throws IOException{
