@@ -16,21 +16,19 @@ import java.net.URL;
  * @author darian y lucas
  */
 public class utiles {
-    public static String  getMovie(String title) throws IOException{
-        String response = null; 
+
+    public static String getMovie(String title) throws IOException {
+        String response = null;
         try {
-            URLConnection connection = new URL("http://www.omdbapi.com/?apikey=a8407cda&t="+title.trim().replaceAll(" ", "+")).openConnection();
-            try(Scanner scanner = new Scanner(connection.getInputStream());){
-            response = scanner.useDelimiter("\\A").next();
-}
+            URLConnection connection = new URL("http://www.omdbapi.com/?apikey=a8407cda&t=" + title.trim().replaceAll(" ", "+")).openConnection();
+            try (Scanner scanner = new Scanner(connection.getInputStream());) {
+                response = scanner.useDelimiter("\\A").next();
+            }
         } catch (MalformedURLException ex) {
             System.err.println(ex);
-            
+
         }
-        return response; 
+        return response;
     }
-    
-    
-    
 
 }

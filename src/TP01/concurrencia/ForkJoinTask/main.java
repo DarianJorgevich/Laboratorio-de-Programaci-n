@@ -22,7 +22,7 @@ public class main {
         */
         String resultado = "";
         long time = System.currentTimeMillis();
-        String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "The Dark Knight", "47 Ronin", "El Hoyo", "superman", "inception", "batman 1"};
+        String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "The Dark Knight", "47 Ronin", "El Hoyo", "Superman", "Inception", "Batman 1"};
         /**
          * Inicialmente cargamos un arreglo que contiene los titulos de las 
          * peliculas de las que queremos conocer su información
@@ -58,11 +58,11 @@ public class main {
          * Ahora comenzamos la misma descarga anterior, pero esta vez utilizando
          * ForkJoin y RecursiveTask para generar la concurrencia.
          */
-        DownloaderMovies task = new DownloaderMovies(titles);
+        DownloaderMovies task = new DownloaderMovies(titles); //Creamos una nueva tarea
         resultado = ForkJoinPool.commonPool().invoke(task);
         System.out.println(resultado);
         System.out.println("\u001B[32m================Termina descarga concurrente===============");
-        System.out.println("Tiempo concurrente : \u001B[32m"+(System.currentTimeMillis()-time));
+        System.out.println("Tiempo concurrente : \u001B[32m"+(System.currentTimeMillis()-time));     
         /**
          * Una vez que termina de descargar toda la información referente a cada
          * pelicula de manera concurrente, nos muestra dicha información y el 
