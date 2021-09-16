@@ -29,8 +29,8 @@ public class DownloaderMovies extends RecursiveTask<String>{
         if(data.length ==1){
             //Si solo tengo un titulo que buscar en el arreglo de titulos de peliculas
             try {
-                String auxi = getMovie(data[0]);
-                result = auxi + "\n";
+                String aux = getMovie(data[0]);
+                result = aux + "\n";
             } catch (IOException ex) {
                 Logger.getLogger(DownloaderMovies.class.getName()).log(Level.SEVERE, null, ex);
             }

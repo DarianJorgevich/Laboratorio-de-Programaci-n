@@ -20,7 +20,7 @@ public class main {
          * de la cual al ingresarle el TITULO de una película, ésta buscar su 
          * info relacionada (titulo, año, calificación, duración, etc.).
         */
-        String resultado = "";
+        String result = "";
         long time = System.currentTimeMillis();
         String []titles = {"Blade Runner","Godzilla", "The Godfather", "The Godfather: Part II", "The Dark Knight", "47 Ronin", "El Hoyo", "Superman", "Inception", "Batman 1"};
         /**
@@ -59,8 +59,8 @@ public class main {
          * ForkJoin y RecursiveTask para generar la concurrencia.
          */
         DownloaderMovies task = new DownloaderMovies(titles); //Creamos una nueva tarea
-        resultado = ForkJoinPool.commonPool().invoke(task);
-        System.out.println(resultado);
+        result = ForkJoinPool.commonPool().invoke(task);
+        System.out.println(result);
         System.out.println("\u001B[32m================Termina descarga concurrente===============");
         System.out.println("Tiempo concurrente : \u001B[32m"+(System.currentTimeMillis()-time));     
         /**

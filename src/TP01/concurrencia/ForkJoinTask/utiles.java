@@ -16,11 +16,12 @@ import java.net.URL;
  * @author darian y lucas
  */
 public class utiles {
-
+    
     public static String getMovie(String title) throws IOException {
+        final String apikey = "a8407cda&t";
         String response = null;
         try {
-            URLConnection connection = new URL("http://www.omdbapi.com/?apikey=a8407cda&t=" + title.trim().replaceAll(" ", "+")).openConnection();
+            URLConnection connection = new URL("http://www.omdbapi.com/?apikey="+apikey+"=" + title.trim().replaceAll(" ", "+")).openConnection();
             try (Scanner scanner = new Scanner(connection.getInputStream());) {
                 response = scanner.useDelimiter("\\A").next();
             }
