@@ -15,7 +15,7 @@ public class Cinco extends Manejador {
             if (monto >= 5) {
                 int cantBilletes = monto / 5;
                 vuelto = monto % 5;
-                System.out.printf("La maquina le da ",cantBilletes, "billetes de '%d' 5$ pesos argentinos.");
+                System.out.printf("Dispensing '%d' 5$ currency note.\n", cantBilletes);
 
             }
             if (vuelto > 0 && this.nextDispenser != null) {
