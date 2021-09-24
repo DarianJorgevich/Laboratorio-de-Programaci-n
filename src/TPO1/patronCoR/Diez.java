@@ -10,7 +10,7 @@ public class Diez extends Manejador {
     @Override
     public void dispensar(PapelMoneda divisa) {
         if (divisa != null) {
-            int monto = divisa.getAmount();
+            int monto = divisa.getMonto();
             int vuelto = monto;
             if (monto >= 10) {
                 int cantBilletes = monto / 10;

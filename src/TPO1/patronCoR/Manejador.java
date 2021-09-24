@@ -7,6 +7,7 @@ public abstract class Manejador {
         this.nextDispenser = nextDispenser;
     }
 
+    //el metodo dispensar es el que se va a encargar de dar el dinero 
     public abstract void dispensar(PapelMoneda divisa);
 }
 

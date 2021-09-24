@@ -9,11 +9,11 @@ public class PapelMoneda {
         this.monto = monto;
     }
 
-    public int getAmount() {
+    public int getMonto() {
         return monto;
     }
 
-    public void setAmount(int monto) {
+    public void setMonto(int monto) {
         this.monto = monto;
     }
 }
