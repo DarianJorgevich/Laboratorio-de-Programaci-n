@@ -15,7 +15,14 @@ public class Diez extends Manejador {
             if (monto >= 10) {
                 int cantBilletes = monto / 10;
                 vuelto = monto % 10;
-                System.out.printf("Dispensing '%d' 10$ currency note.\n", cantBilletes);
+                System.out.print("La maquina le da " +cantBilletes);
+               
+               if(cantBilletes==1){
+                   System.out.print(" billete de 10$\n");
+                }
+               else{
+                   System.out.print(" billetes de 10$\n");
+               }
 
             }
             if (vuelto > 0 && this.nextDispenser != null) {

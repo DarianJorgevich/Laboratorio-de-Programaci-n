@@ -1,8 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package TPO1.patronCoR;
+
 import java.util.Scanner;
 
-public class PruebaCajero {
-    
+/**
+ *
+ * @author Lucas
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             do {
@@ -23,4 +36,5 @@ public class PruebaCajero {
         }
         return true;
     }
+    
 }

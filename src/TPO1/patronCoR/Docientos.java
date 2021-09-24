@@ -15,7 +15,14 @@ public class Docientos extends Manejador {
             if (monto >= 200) {
                 int cantBilletes = monto / 200;
                 vuelto = monto % 200;
-                System.out.printf("Dispensing '%d' 200$ currency note.\n", cantBilletes);
+                System.out.print("La maquina le da " +cantBilletes);
+               
+               if(cantBilletes==1){
+                   System.out.print(" billete de 200$\n");
+                }
+               else{
+                   System.out.print(" billetes de 200$\n");
+               }
 
             }
             if (vuelto > 0 && this.nextDispenser != null) {

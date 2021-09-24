@@ -15,7 +15,14 @@ public class Uno extends Manejador {
             if (monto >= 1) {
                 int cantBilletes = monto / 1;
                 vuelto = monto % 1;
-                System.out.printf("Dispensing '%d' 1$ currency note.\n", cantBilletes);
+                System.out.print("La maquina le da " +cantBilletes);
+               
+               if(cantBilletes==1){
+                   System.out.print(" moneda de 1$\n");
+                }
+               else{
+                   System.out.print(" monedas de 1$\n");
+               }
 
             }
             if (vuelto > 0 && this.nextDispenser != null) {
