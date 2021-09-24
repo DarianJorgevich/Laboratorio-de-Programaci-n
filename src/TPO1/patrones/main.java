@@ -49,7 +49,7 @@ public class main {
 
     public static void menu1() throws IOException {
         Scanner sc = new Scanner(System.in);
-        int op = 1, i = 0;
+        int op = 1;
         while (op != 0) {
             menu1Text();
             op = sc.nextInt();
