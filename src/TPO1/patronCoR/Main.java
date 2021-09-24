@@ -29,9 +29,10 @@ public class Main {
         }
         
     }
+    //si el monto puesto por el usuario es negarivo sera invalido
     private static boolean esValido(int amount) {
         if (amount <= 0) {
-            System.out.println("Invalid amount. Try again!");
+            System.out.println("Monto invalido. Intente nuevamente!");
             return false;
         }
         return true;
