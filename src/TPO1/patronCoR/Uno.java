@@ -24,9 +24,11 @@ public class Uno extends Manejador {
                    System.out.print(" monedas de 1$\n");
                }
 
+               divisa.setMonto(vuelto);
+
             }
             if (vuelto > 0 && this.nextDispenser != null) {
-                this.nextDispenser.dispensar(new PapelMoneda(vuelto));
+                this.nextDispenser.dispensar(divisa);
             }
 
         }

@@ -24,9 +24,11 @@ public class Veinte extends Manejador {
                    System.out.print(" billetes de 20$\n");
                }
 
+               divisa.setMonto(vuelto);
+
             }
             if (vuelto > 0 && this.nextDispenser != null) {
-                this.nextDispenser.dispensar(new PapelMoneda(vuelto));
+                this.nextDispenser.dispensar(divisa);
             }
 
         }

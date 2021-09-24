@@ -23,12 +23,12 @@ public class Cien extends Manejador {
                else{
                    System.out.print(" billetes de 100$\n");
                }
+               divisa.setMonto(vuelto);
 
             }
             if (vuelto > 0 && this.nextDispenser != null) {
-                this.nextDispenser.dispensar(new PapelMoneda(vuelto));
+                this.nextDispenser.dispensar(divisa);
             }
-
         }
 
     }

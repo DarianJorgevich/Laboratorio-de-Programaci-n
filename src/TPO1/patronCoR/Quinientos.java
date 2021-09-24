@@ -8,6 +8,14 @@ public class Quinientos extends Manejador {
 
     
     @Override
+    /*
+    El metodo dispensar se encargara de:
+     - Segun la cantidad de dinero que le llegue (divisa) vera si la puede fraccionar en 500
+     - Si puede, dara la cantidad de billetes de 500 pesos que le corresponde a la maquina
+        - En este caso el resto de la division sera el nuevo monto de la divisa y se lo envia al siguiente manejador 
+     - Si no puede fraccionar en 500 pesos, envia la divisa al siguiente manejador
+     -
+    */
     public void dispensar(PapelMoneda divisa) {
         if (divisa != null) {
            
@@ -24,10 +32,11 @@ public class Quinientos extends Manejador {
                else{
                    System.out.print(" billetes de 500$\n");
                }
+               divisa.setMonto(vuelto);
             
             }
             if (vuelto > 0 && this.nextDispenser != null) {
-                this.nextDispenser.dispensar(new PapelMoneda(vuelto));
+                this.nextDispenser.dispensar(divisa);
             }
 
         }
