@@ -18,14 +18,14 @@ public class Main {
      */
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            do {
+            
                 System.out.println(
                         "Por favor ingrese un monto para retirar (No se admiten numeros reales)");
                 int monto = scanner.nextInt();
                 if (esValido(monto)) {
                     Cajero.retirar(new PapelMoneda(monto));
                 }
-            } while (true);
+            
         }
         
     }
