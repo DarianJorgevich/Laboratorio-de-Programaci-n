@@ -2,6 +2,7 @@ package TPO1.patronCoR;
 
 public class PapelMoneda {
 
+    //Objeto con el cual el cajero trabajara el dinero
     protected int monto;
 
     public PapelMoneda(int monto) {
