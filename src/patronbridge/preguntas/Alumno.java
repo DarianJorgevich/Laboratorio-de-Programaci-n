@@ -24,7 +24,7 @@ public abstract class Alumno {
     }
 
     public void respuestaCorrecta() {
-        pregunta.respuestaCorrecta();
+        pregunta.marcarRespuestaCorrecta();
     }
 
     public abstract void mostrarPregunta(int num);

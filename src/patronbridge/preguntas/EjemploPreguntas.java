@@ -19,27 +19,10 @@ public class EjemploPreguntas {
      */
     public static void main(String[] args) {
         
-        Primario a= new Primario ("Lucas", new Historia());
+        Primario a= new Primario ("Lucas", new Geografia());
         Secundario b= new Secundario ("Darian", new Historia());
-        char res;
-        Scanner sc = new Scanner(System.in);
-        int cantPreguntasA= a.obtenerCantidadPreguntas();
-        for(int i=0;i<cantPreguntasA;i++){
-            a.mostrarPregunta(i);
-            res= sc.next().charAt(0);
-            a.verificarRespuesta(i, res);
-            a.siguientePregunta();
-        }
-        a.mostrarResultados();
-        
-//        int cantPreguntasB= b.obtenerCantidadPreguntas();
-//        for(int i=0;i<cantPreguntasB;i++){
-//            b.mostrarPregunta(i);
-//            res= sc.next().charAt(0);
-//            b.verificarRespuesta(i, res);
-//            b.siguientePregunta();
-//        }
-//        b.mostrarResultados();
+        Trivia triv = new Trivia(a);
+        triv.iniciarTrivia();
     }
     
 }

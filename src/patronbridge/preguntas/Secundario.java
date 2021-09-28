@@ -19,7 +19,7 @@ public class Secundario extends Alumno {
     
     @Override
     public void mostrarPregunta(int num){
-        pregunta.preguntaDificilMostrar(num);
+        pregunta.mostrarPreguntaDificil(num);
     }
     
     @Override
@@ -41,7 +41,7 @@ public class Secundario extends Alumno {
     
     @Override
     public void mostrarResultados(){
-        int respuestasCorrectas = pregunta.obtenerResultado();
+        int respuestasCorrectas = pregunta.obtenerResultadoFinal();
         int cantPreguntas = pregunta.obtenerCantidadPreguntasDificiles();
         System.out.println(this.nombre+ ", respondiste bien: "+respuestasCorrectas+" de " + cantPreguntas+ " preguntas");
         

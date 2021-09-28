@@ -37,7 +37,7 @@ public class Geografia implements Pregunta {
     
 
     @Override
-    public void preguntaFacilMostrar(int num) {
+    public void mostrarPreguntaFacil(int num) {
         System.out.println(preguntasFaciles.get(num));
     }
 
@@ -47,7 +47,7 @@ public class Geografia implements Pregunta {
     }
 
     @Override
-    public void preguntaDificilMostrar(int num) {
+    public void mostrarPreguntaDificil(int num) {
         System.out.println(preguntasDificiles.get(num));
     }
 
@@ -57,7 +57,7 @@ public class Geografia implements Pregunta {
     }
 
     @Override
-    public int obtenerResultado() {
+    public int obtenerResultadoFinal() {
         return this.resultado;
     }
 
@@ -78,7 +78,7 @@ public class Geografia implements Pregunta {
     }
 
     @Override
-    public void respuestaCorrecta() {
+    public void marcarRespuestaCorrecta() {
         resultado++;
 
     }
