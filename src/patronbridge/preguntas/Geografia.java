@@ -5,15 +5,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Geografia implements Pregunta {
-
+    
+    //Las preguntas estaran representadas en listas de Strings
     private final List<String> preguntasFaciles = new ArrayList<>();
     private final List<String> preguntasDificiles = new ArrayList<>();
+    //Pregunta en la cual el alumno va a operar
     private int preguntaActual = 0;
+    //resultado actual del alumno
     private int resultado = 0;
+    //opcion correcta para las preguntas
     private final char[] respuestasFaciles = {'a', 'c', 'b', 'b','a'};
     private final char[] respuestasDificiles = {'b','a', 'c', 'a', 'a' };
 
     public Geografia() {
+        //en el constructor añadimos las preguntas que querramos 
         preguntasFaciles.add("¿Cuál es la capital de Turquía? \n a) Ankara b) Buenos Aires c) Lima");
         preguntasFaciles.add("¿En qué provincia se encuentra las cataratas del Iguazú? \n a) Rio negro b) Neuquen c) Misiones");
         preguntasFaciles.add("¿Donde se ubica el volcan Lanin? \n a) Rio negro b) Neuquen c) Mendoza");

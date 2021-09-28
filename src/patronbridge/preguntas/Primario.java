@@ -1,6 +1,9 @@
 
 package patronbridge.preguntas;
 
+/*
+La idea es que el alumno primario utilice y responda preguntas faciles de la interfaz pregunta
+*/
 
 public class Primario extends Alumno {
     
@@ -16,7 +19,9 @@ public class Primario extends Alumno {
     
     @Override
     public void verificarRespuesta(int num, char respuestaUser){
+        //resPregunta es la opcion correcta a la pregunta
         char resPregunta = pregunta.preguntaFacilRespuesta(num);
+      
         if(respuestaUser==resPregunta){
             System.out.println("Respuesta correcta!");
             this.respuestaCorrecta();
@@ -40,12 +45,12 @@ public class Primario extends Alumno {
         System.out.println(this.nombre+ ", respondiste bien: "+respuestasCorrectas+" de " + cantPreguntas+ " preguntas");
         
         this.respuestaPrimario((respuestasCorrectas*100)/cantPreguntas);
-        
+        //una vez que se muestran los resultados se limpian los resultados para iniciar la trivia nuevamente
         pregunta.limpiar();
     }
     
     public void respuestaPrimario(int avg){
-       
+       //modulo que dado el porcentaje de respuestas correctas el alumno tendra distintas respuestas del sistema 
         if (avg==100){
             System.out.println("Excelente, respondiste bien todas las preguntas!");
         }

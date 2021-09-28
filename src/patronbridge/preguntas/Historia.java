@@ -7,14 +7,19 @@ import java.util.List;
 
 public class Historia implements Pregunta{
     
+    //Las preguntas estaran representadas en listas de Strings
     private final List<String> preguntasFaciles = new ArrayList<>();
     private final List<String> preguntasDificiles = new ArrayList<>();
+    //Pregunta en la cual el alumno va a operar
     private int preguntaActual = 0;
+    //resultado actual del alumno
     private int resultado = 0;
+    //opcion correcta para las preguntas
     private final char[] respuestasFaciles = {'a', 'c', 'b', 'b','a','a'};
     private final char[] respuestasDificiles = {'c','b', 'b', 'a', 'a', 'c', 'b', 'a','d','b'};
     
     public Historia(){
+        //en el constructor añadimos las preguntas que querramos 
         preguntasFaciles.add("¿Como se llama la moneda del pais? \n a) Peso b) Real c) Corona");
         preguntasFaciles.add("¿Quien es el presidente actual de Argentina? \n a) Mauricio Macri b) Cristina Fernández de Kirchner c) Alberto Fernández");
         preguntasFaciles.add("¿Quien es el creador de la bandera Argentina? \n a) Sarmiento b) Belgrano c) San Martin");

@@ -1,7 +1,9 @@
 
 package patronbridge.preguntas;
 
-
+/*
+La idea es que el alumno secundario utilice y responda preguntas dificiles de la interfaz pregunta
+*/ 
 public class Secundario extends Alumno {
     
     

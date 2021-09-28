@@ -12,7 +12,7 @@ public class Trivia {
         this.al=al;
         
     }
-    
+    //La clase esta encargada de iniciar la trivia segun el alumno y las preguntas implementadas
     public void iniciarTrivia(){
     char res;
         Scanner sc = new Scanner(System.in);
