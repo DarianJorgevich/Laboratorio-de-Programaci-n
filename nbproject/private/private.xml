@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TPO1/patronCoR/PapelMoneda.java</file>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TPO1/patronCoR/Main.java</file>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TPO1/patronCoR/Quinientos.java</file>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TPO1/patronCoR/Cajero.java</file>
-            <file>file:/home/darian/NetBeansProjects/lab/src/TPO1/patronCoR/Manejador.java</file>
+            <file>file:/home/darian/NetBeansProjects/lab/src/patronbridge/preguntas/Pregunta.java</file>
+            <file>file:/home/darian/NetBeansProjects/lab/src/patronbridge/preguntas/Geografia.java</file>
+            <file>file:/home/darian/NetBeansProjects/lab/src/patronbridge/preguntas/Trivia.java</file>
+            <file>file:/home/darian/NetBeansProjects/lab/src/patronbridge/preguntas/Alumno.java</file>
+            <file>file:/home/darian/NetBeansProjects/lab/src/patronbridge/preguntas/EjemploPreguntas.java</file>
+            <file>file:/home/darian/NetBeansProjects/lab/src/patronbridge/preguntas/Secundario.java</file>
         </group>
     </open-files>
 </project-private>
