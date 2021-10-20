@@ -121,3 +121,7 @@ nav ul li a {
 .card-img-top {
     border-radius: 0.5rem;
 }
+
+.menuHeader {
+    height: auto;
+  }
