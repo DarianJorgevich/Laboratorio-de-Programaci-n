@@ -9,28 +9,91 @@
 
 
 
-
 <body>
+  
   <header>
     <div class="logoHeader" >
-      <div id="logo"><img class="logoImg" src="img/1ac1d1e7-83f9-4991-87a2-a420f5ed4095.jpeg" rounded-images></div>
+      <div><img class="logoImg" src="img/logo_extendido2.jpg" rounded-images></div>
       <div id="search"></div>
     </div>
-    <div id="menuHeader" style="background-color: darkgray ;">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Insumos</a></li>
-          <li><a href="productos.html">Todos los Productos</a></li>
-          <li><a href="#">Promociones</a></li>
-        </ul>
-      </nav>
-    </div>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Insumos</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Todos los productos</a>
+            </li> 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ofertas
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ofertas nuevas</a></li>
+                <li><a class="dropdown-item" href="#">Ofertas dia de la madre</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
+
+ 
 
   <div class="main">
     <!--Acá tengo que poner otro flex para poner tarjetas de productos-->
+    
+    <div class="row">
+      <div class="col-4">
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          </div>
+          
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/diaMadreCarrousel.png" alt="Los Angeles" class="img-fluid" style="width:100%">
+              
+            </div>
+            <div class="carousel-item">
+              <img src="img/contactoCarrousel.png" alt="Chicago" class="img-fluid" style="width:100%">
+             
+            </div>
+          
+          </div>
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev" >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+            </div>
+          
+   
+    </div>
     <h1><b>Articulos Destacados</b></h1>
     <div class="contenido">
         <!-- Inserto tarjetas con articulos -->
@@ -51,7 +114,24 @@
               <a href="#" class="btn btn-primary">Mas info+</a>
             </div>
           </div>
-        
+
+          <div class="card" style="width: 18rem;">
+            <img src="img/item2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">HP 240 G7 CELERON N4020</h5>
+              <p class="card-text">Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet - WiFi - Pantalla LED 14" - Microsoft Windows 10</p>
+              <a href="#" class="btn btn-primary">Mas info+</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="img/item2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">HP 240 G7 CELERON N4020</h5>
+              <p class="card-text">Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet - WiFi - Pantalla LED 14" - Microsoft Windows 10</p>
+              <a href="#" class="btn btn-primary">Mas info+</a>
+            </div>
+          </div>
         <!-- FIN Inserto tarjetas con articulos FIN -->
       
     </div>

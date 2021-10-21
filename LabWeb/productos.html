@@ -7,34 +7,54 @@
   <link href="styles.css" rel="stylesheet">
 </head>
 
-<style>
-  /*Despues hay que pasarlo a un .css*/
-
-  #menuHeader {
-    height: auto;
-  }
-
-</style>
 
 
 <body>
+  
   <header>
-    <div class="logoHeader" style="background-color:  black  ;">
-      <div id="logo"><img class="logoImg" src="img/1ac1d1e7-83f9-4991-87a2-a420f5ed4095.jpeg" rounded-images></div>
+    <div class="logoHeader" >
+      <div><img class="logoImg" src="img/logo_extendido2.jpg" rounded-images></div>
       <div id="search"></div>
     </div>
-    <div id="menuHeader" style="background-color: darkgray ;">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Insumos</a></li>
-          <li><a href="productos.html">Todos los Productos</a></li>
-          <li><a href="#">Promociones</a></li>
-        </ul>
-      </nav>
-    </div>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Insumos</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Todos los productos</a>
+            </li> 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ofertas
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ofertas nuevas</a></li>
+                <li><a class="dropdown-item" href="#">Ofertas dia de la madre</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
+
+ 
 
   <div class="main">
     <!--Acá tengo que poner otro flex para poner tarjetas de productos-->
@@ -120,7 +140,16 @@
     </div>
   </div>
 
+
+
   <footer>
     &copy; Copyright 2021. Todos los derechos reservados. @Authors: San Segundo, Lucas - Jorgevich, Darian.
   </footer>
+  <!-- Script para el uso de bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- FIN Script para el uso de bootstrap FIN-->
 </body>
+
+</html>
