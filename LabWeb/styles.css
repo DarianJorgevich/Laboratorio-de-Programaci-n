@@ -126,6 +126,7 @@ header div {
     background: #125688;
     color: white;
   }
+
   /*estilos del contacto*/ 
   .horarios {
     text-align: left;
@@ -136,5 +137,10 @@ header div {
     text-align: center;
     
   }
-  
+
+  .paginador{
+      margin-left: 1%;
+  }
+
+ 
 
