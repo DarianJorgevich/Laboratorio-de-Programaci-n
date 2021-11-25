@@ -1,0 +1,143 @@
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+h1 {
+    margin-left: 2%;
+}
+
+footer {
+    padding: 4%;
+    text-align: center;
+    color: gray;
+}
+
+/*Configuración de la cabecera*/
+
+header {
+    width: 80%;
+    /*height: 15%;*/
+    /*Si no lo pongo el flex no aparece*/
+    /*color de los bordes*/
+    display: flex;
+    /*inicializa el flex*/
+    flex-direction: column;
+    /*define la estructura del flex, en este caso columnas*/
+    /*align-items: flex-start;  /*Indica alineacion dentro del flex*/
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+header div {
+    flex: auto;
+}
+
+/*Configuración imagen del logo*/
+
+.logoImg {
+    height: 130px;
+    border-radius: 1rem;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/*Configuración header del logo*/
+
+.logoHeader {
+    height: 140px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: black;
+}
+
+/*Configuraciones de barras nav*/
+
+/*Configuración estructrura principal*/
+
+.main {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    background-color: white;
+    flex-direction: column;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.main div {
+    flex: auto;
+}
+
+/*Configuración flex de contenido*/
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.contenido div {
+    flex: none;
+}
+
+/*Configuración tarjetas de artículos*/
+
+.card {
+    margin: 1%;
+    width: 18rem;
+    border-radius: 0.5rem;
+}
+
+.card-img-top {
+    border-radius: 0.5rem;
+}
+
+.menuHeader {
+    height: auto;
+}
+
+/*Iconos redes sociales*/
+
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+
+}
+
+/*estilos del contacto*/
+.horarios {
+    text-align: left;
+    text-indent: 30px;
+}
+
+.direccion {
+    text-align: center;
+
+
+}
+
+.paginador {
+    margin-left: 1%;
+}

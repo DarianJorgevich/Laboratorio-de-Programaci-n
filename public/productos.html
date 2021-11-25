@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+  
+  <header>
+    <div class="logoHeader" >
+      <div><img class="logoImg" src="img/logo_extendido2.jpg" rounded-images></div>
+      <div id="search"></div>
+    </div>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Insumos</a>
+            </li>  
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Todos los productos</a>
+            </li> 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ofertas
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ofertas nuevas</a></li>
+                <li><a class="dropdown-item" href="#">Ofertas dia de la madre</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+ 
+
+  <div class="main">
+    <!--Acá tengo que poner otro flex para poner tarjetas de productos-->
+    <h1><b>Todos los productos</b></h1>
+    
+    <div class="contenido">
+        <!-- Inserto tarjetas con articulos -->
+          <div class="card" style="width: 18rem;">
+            <img src="img/item1.jpg" alt="allInOne-Notebook" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">AIO HP 20-B52LA i3/4GB/1TB</h5>
+              <p class="card-text">PC All-In-One, con monitor LCD 20".</p>
+              <a href="#" class="btn btn-primary">Mas info+</a>
+            </div>
+          </div>
+       
+          <div class="card" style="width: 18rem;">
+            <img src="img/item2.jpg" alt="Note-HP240" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">HP 240 G7 CELERON N4020</h5>
+              <p class="card-text">Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet - WiFi - Pantalla LED 14" - Microsoft Windows 10</p>
+              <a href="#" class="btn btn-primary">Mas info+</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="img/item3.jpg" alt="Note-DELLA8" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">NOTEBOOK DELL A8 15P 1TB WIN10</h5>
+              <p class="card-text">Portátil de 15,6 pulgadas con AMD Ryzen ™ procesadores móviles con Radeon ™ Vega Graphics, en un diseño portátil, delgado con bordes estrechos.</p>
+              <a href="#" class="btn btn-primary">Mas info+</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img src="img/item5.jpg" alt="Note-lenovoThinkPad" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lenovo ThinkPad L15</h5>
+              <p class="card-text">Intel® Core™ i5-10210U - 8GB - 256GB SSD - 15,6" - Intel® UHD Graphics for 10th Gen Intel® Processors - Ethernet - Wlan+bluetooth - webcam</p>
+              <a href="#" class="btn btn-primary">Mas info+</a>
+            </div>
+          </div>
+
+        <!-- FIN Inserto tarjetas con articulos FIN -->
+      
+    </div>
+
+    <div class="paginador">
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="productos2.html">2</a></li>
+          <li class="page-item">
+            <a class="page-link" href="productos2.html">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+
+  <footer>
+    &copy; Copyright 2021. Todos los derechos reservados. @Authors: San Segundo, Lucas - Jorgevich, Darian.
+  </footer>
+  <!-- Script para el uso de bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- FIN Script para el uso de bootstrap FIN-->
+</body>
+
+</html>
