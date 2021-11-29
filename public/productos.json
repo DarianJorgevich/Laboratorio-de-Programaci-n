@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "img": "img/item1.jpg",
+        "titulo": "AIO HP 20-B52LA i3/4GB/1TB",
+        "desc": "PC All-In-One, con monitor LCD 20 pulgadas"
+    },
+    {
+        "id": "2",
+        "img": "img/item2.jpg",
+        "titulo": "HP 240 G7 CELERON N4020",
+        "desc": "Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet - WiFi - Pantalla LED 14 pulgadas - Microsoft Windows 10"
+    }
+]

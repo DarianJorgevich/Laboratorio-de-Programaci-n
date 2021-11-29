@@ -15,13 +15,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static('public'));
 
-//ruta principal
-router.get('/', (req,res)=> { 
-    res.sendFile(path.join(__dirname, "/public/index.html"));
-});
+//rutas
+app.use(require('./routes/index'));
+app.use('/api/productos',require('./routes/productos'));
 
 //empezando el servidor
-
 app.listen(3000, ()=> {
     console.log(`server on port ${app.get('port')}`); //app lo podemos obtener desde cualquier lado de nuestra aplicacion 
 });
