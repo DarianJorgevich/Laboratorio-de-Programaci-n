@@ -5,7 +5,7 @@ const path = require("path");
 const { Router, application, response } = require('express');
 const router = Router();
 
-//settings
+//configuraciones
 app.set('port',process.env.PORT || 3000);
 app.set('json spaces',2);
 
@@ -15,11 +15,19 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static('public'));
 
+
+//ruta principal
+router.get('/', (req,res)=> { 
+    res.sendFile(path.join(__dirname, "/src/public/index.html"));
+});
+
 //rutas
-app.use(require('./routes/index'));
-app.use('/api/productos',require('./routes/productos'));
+app.use('/api/productos',require('./rutas/productos'));
+
+//static 
+app.use(express.static(path.join(__dirname,'public')));
 
 //empezando el servidor
 app.listen(3000, ()=> {
     console.log(`server on port ${app.get('port')}`); //app lo podemos obtener desde cualquier lado de nuestra aplicacion 
-});
+})

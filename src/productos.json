@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "titulo": "AIO HP 20-B52LA i3/4GB/1TB",
+        "desc": "PC All-In-One, con monitor LCD 20",
+        "ubicacion": "img/item1.jpg",
+        "alt": "allInOne-Notebook"
+    },
+    {
+        "id": 2,
+        "titulo": "HP 240 G7 CELERON N4020",
+        "desc": "Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet - WiFi - Pantalla LED 14 - Microsoft Windows 10",
+        "ubicacion": "img/item2.jpg",
+        "alt": "Note-HP240"
+    },
+    {
+        "id": 3,
+        "titulo": "NOTEBOOK DELL A8 15P 1TB WIN10",
+        "desc": "Portátil de 15,6 pulgadas con AMD Ryzen ™ procesadores móviles con Radeon ™ Vega Graphics, en un diseño portátil, delgado con bordes estrechos.",
+        "ubicacion": "img/item3.jpg",
+        "alt": "allInOne-Notebook"
+    },
+    {
+        "id": 4,
+        "titulo": "GOOGLE CHROMECAST 3",
+        "desc": "Chromecast te permite disfrutar fácilmente en tu TV de tus películas, programas de TV, fotos y sitios web favoritos de YouTube, Google Play y Chrome, entre otros servicios.",
+        "ubicacion": "img/item4.png",
+        "alt": "Chromecast3"
+    },
+    {
+        "id": 5,
+        "titulo": "Lenovo ThinkPad L15",
+        "desc": "Intel® Core™ i5-10210U - 8GB - 256GB SSD - 15,6 - Intel® UHD Graphics for 10th Gen Intel® Processors - Ethernet - Wlan+bluetooth - webcam",
+        "ubicacion": "img/item5.jpg",
+        "alt": "Note-lenovoThinkPad"
+    },
+    {
+        "id": 6,
+        "titulo": "MOTOROLA SONIC BOOST 220",
+        "desc": "Parlante Bluetooth inalambrico - 6 horas de reproducción - Resistente al agua - Compatible con ALEXA Siri, Google Now y Alexa - Incluye cable cargador y auxiliar",
+        "ubicacion": "img/item6.jpg",
+        "alt": "Moto-sonic-boost-220"
+    },
+    {
+        "id": 7,
+        "titulo": "MOTOROLA ESCAPE 220 NEGRO",
+        "desc": "Auriculares inalámbricos - 23hs bateria - Modo manos libres - Asistentes de voz integrados: Alexa, Siri y Google Assistant - Con micrófono incorporado",
+        "ubicacion": "img/item7.jpg",
+        "alt": "Moto-Escape-220"
+    },
+    {
+        "id": 8,
+        "titulo": "LECTOR NETMAK NM-LC401 NEGRO",
+        "desc": "USB 1D 5V - Fuente de luz: 650nm - Velocidad de lectura: 120 - Peso: 235 g - Procesador del cpu: 32 bits - Profundidad máxima de campo: 800 mm",
+        "ubicacion": "img/item8.jpg",
+        "alt": "Lector-netmak"
+    }
+]
