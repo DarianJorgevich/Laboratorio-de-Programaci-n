@@ -7,12 +7,6 @@ const fs = require('fs');
 const json_productos = fs.readFileSync('src/productos.json', 'utf-8'); //leemos el Json
 let productos = JSON.parse(json_productos);
 
-/*router.get(['/','/:id'], (req, res) => { //envia el json
-    var idProd = req.params.id;
-    console.log('id parametro: ',idProd);
-    res.json(productos[idProd]);
-    //console.log('Se envio: ', productos);
-});*/
 //Metodo GET por id. Si se ingresa mal id, se envian todos los elementos
 router.get(['/', '/:id', '/:cantidad' & '/:desde'], (req, res) => { //envia el json
     console.log('Parametros query: ', JSON.stringify(req.query));
@@ -20,7 +14,11 @@ router.get(['/', '/:id', '/:cantidad' & '/:desde'], (req, res) => { //envia el j
     const cantProd = req.query.cantidad;
     const desdeProd = req.query.desde;
     if (idProd && !cantProd && !desdeProd) {    //Fue la forma que se me ocurrio de verificar que solo manden id
-        res.json(productos[idProd]);
+        _.each(productos, (producto, id) => {
+            if(producto.id == idProd){
+                res.json(producto);
+            }
+        });
     } else {
         if (cantProd && desdeProd && !idProd) {
             console.log('Se deberia enviar un rango desde:',desdeProd,' - La cantidad de:',cantProd)
