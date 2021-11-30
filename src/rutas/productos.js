@@ -12,6 +12,23 @@ router.get('/', (req, res) => { //envia el json
     console.log('Se envio: ', productos);
 })
 
+router.get('/:id', (req,res) => {
+    const { id } = req.params;
+    console.log(typeof id);
+    var hay=false;
+    //aca se deberia validar de que el id sea un numero 
+    _.each(productos, (producto, i) => {
+        if (producto.id == id) {
+            hay=true;
+            res.json([producto]);
+            
+        };
+    });
+    if(!hay){
+        res.status(404).json({ error: 'No existe el ID' });
+    } 
+})
+
 router.post('/', async (req, res) => {
     const { titulo, desc, ubicacion, alt } = req.body;
     if (titulo && desc && ubicacion && alt) { //validacion (ACA FIJATE DE HACERLO EN OTRA CLASE COSA O USA LIBRERIAS DE VALIDACION)
