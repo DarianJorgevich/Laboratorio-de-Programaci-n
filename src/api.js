@@ -17,11 +17,9 @@ app.use(express.static('public'));
 
 
 //ruta principal
-router.get('/', (req,res)=> { 
-    res.sendFile(path.join(__dirname, "/src/public/index.html"));
-});
 
 //rutas
+app.use('/',require('./rutas/home'));
 app.use('/api/productos',require('./rutas/productos'));
 
 //static 
