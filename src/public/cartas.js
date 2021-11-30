@@ -33,8 +33,6 @@ function getRango(cantidad, desde) {
 //esta funcion muestra las cartas de el json
 //como parametros esta el arreglo de productos, el div que queremos, el primer numero del arreglo y el ultimo que querramos
 function mostrarCartas(productos, unDiv, desde, hasta) {
-  //var hasta = (productos).length; 
-  //console.log('hasta: ',hasta);
   for (desde; desde < hasta; desde++) {
     unDiv.innerHTML += ` 
             <div class="card">
