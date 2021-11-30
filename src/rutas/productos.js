@@ -56,7 +56,7 @@ router.get('/:id', (req,res) => {
 
 router.post('/', async (req, res) => {
     const { titulo, desc, ubicacion, alt } = req.body;
-    if (titulo && desc && ubicacion && alt) { //validacion (ACA FIJATE DE HACERLO EN OTRA CLASE COSA O USA LIBRERIAS DE VALIDACION)
+    if (validarProducto(titulo, desc, ubicacion, alt)) { //validacion (ACA FIJATE DE HACERLO EN OTRA CLASE COSA O USA LIBRERIAS DE VALIDACION)
         const id = productos.length + 1;
         const newProducto = { ...req.body, id };
         productos.push(newProducto);
@@ -71,14 +71,14 @@ router.post('/', async (req, res) => {
     }
     else {
 
-        res.status(500).json({ error: 'hubo un error, faltan datos' });
+        res.status(500).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
     }
 })
 
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const { titulo, desc, ubicacion, alt } = req.body;
-    if (titulo && desc && ubicacion && alt) {
+    if (validarProducto(titulo, desc, ubicacion, alt )) {
         _.each(productos, (producto, i) => {
             if (producto.id == id) {
                 producto.titulo = titulo;
@@ -96,8 +96,16 @@ router.put('/:id', async (req, res) => {
         res.json(productos);
     }
     else {
-        res.status(500).json({ error: 'hubo un error' });
+        res.status(500).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
     }
 })
+
+function validarProducto(titulo, desc, ubicacion, alt) {
+    var esCorrecto = true;
+    if (!titulo || !desc || !ubicacion || !alt) {
+        esCorrecto = false;
+    }
+    return esCorrecto;
+}
 
 module.exports = router;
