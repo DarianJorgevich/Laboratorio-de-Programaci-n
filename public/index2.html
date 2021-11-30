@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" >Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Servicios</a>
@@ -92,11 +92,84 @@
     </div>
 
     <h1><b>Articulos Destacados</b></h1>
-    <div class="contenido" , id="cardDiv">
-      <!-- Inserto tarjetas con articulos -->
+    <button id="botonDest">Destacados</button>
+    <div id="artDestacados" class="contenido">
       
-    </div>
+      <!--Script funcion del boton home, PRUEBA-->
+      
+      <script>
+        function ajax(){
+          const http = new XMLHttpRequest();
+          const url = 'http://localhost:3000/api/productos';
+          http.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+              console.log(this.responseText);
+              document.getElementById("artDestacados").innerHTML = this.responseText;
+            }
+          }
+          http.open("GET", url);
+          http.send();
+        }
 
+        document.getElementById("botonDest").addEventListener("click",function(){
+          ajax()
+        });
+      </script>
+      <!--FIN Script funcion del boton home, PRUEBA-->
+
+
+      <!-- Inserto tarjetas con articulos -->
+      <div class="card" style="width: 18rem;">
+        <img src="img/item1.jpg" alt="allInOne-Notebook" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">AIO HP 20-B52LA i3/4GB/1TB</h5>
+          <p class="card-text">PC All-In-One, con monitor LCD 20".</p>
+          <a href="#" class="btn btn-primary">Mas info+</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="img/item2.jpg" alt="Note-HP240" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">HP 240 G7 CELERON N4020</h5>
+          <p class="card-text">Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet -
+            WiFi - Pantalla LED 14" - Microsoft Windows 10</p>
+          <a href="#" class="btn btn-primary">Mas info+</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="img/item3.jpg" alt="Note-DELLA8" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">NOTEBOOK DELL A8 15P 1TB WIN10</h5>
+          <p class="card-text">Portátil de 15,6 pulgadas con AMD Ryzen ™ procesadores móviles con Radeon ™ Vega
+            Graphics, en un diseño portátil, delgado con bordes estrechos.</p>
+          <a href="#" class="btn btn-primary">Mas info+</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="img/item7.jpg" alt="Moto-Escape-220" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">MOTOROLA ESCAPE 220 NEGRO</h5>
+          <p class="card-text">Auriculares inalámbricos - 23hs bateria - Modo manos libres - Asistentes de voz
+            integrados: Alexa, Siri y Google Assistant - Con micrófono incorporado</p>
+          <a href="#" class="btn btn-primary">Mas info+</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="img/item4.png" alt="Chromecast" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">GOOGLE CHROMECAST 3</h5>
+          <p class="card-text">Chromecast te permite disfrutar fácilmente en tu TV de tus películas, programas de TV,
+            fotos y sitios web favoritos de YouTube, Google Play y Chrome, entre otros servicios.</p>
+          <a href="#" class="btn btn-primary">Mas info+</a>
+        </div>
+      </div>
+      <!-- FIN Inserto tarjetas con articulos FIN -->
+
+    </div>
   </div>
 
 
@@ -109,10 +182,6 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <!-- FIN Script para el uso de bootstrap FIN-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="cartas.js"></script>
 </body>
 
 </html>

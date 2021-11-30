@@ -7,10 +7,35 @@ const fs = require('fs');
 const json_productos = fs.readFileSync('src/productos.json', 'utf-8'); //leemos el Json
 let productos = JSON.parse(json_productos);
 
-router.get('/', (req, res) => { //envia el json
-    res.json(productos);
-    console.log('Se envio: ', productos);
-})
+//Metodo GET por ID
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    var hay = false;
+    //acá deberia validad de que el id sea un numero
+    _.each(productos, (producto, i) => {
+        if (producto.id == id) {
+            hay = true;
+            res.json(producto);
+        }
+    });
+    if (!hay) {
+        res.status(404).json({ error: 'No existe el ID' });
+    }
+});
+//Metodo GET por rango
+router.get(['/','/:cantidad' & '/:desde'], (req, res) => { //envia el json
+    console.log('Parametros query: ', JSON.stringify(req.query));
+    const cantProd = req.query.cantidad;
+    const desdeProd = req.query.desde;
+    if (cantProd && desdeProd) {
+        console.log('Se deberia enviar un rango desde:', desdeProd, ' - La cantidad de:', cantProd)
+        res.json((productos).slice(desdeProd, JSON.parse(desdeProd) + JSON.parse(cantProd)));
+    }else{
+        res.json(productos);
+        console.log('Se envio: ', productos);
+    }
+});
+
 
 router.get('/:id', (req,res) => {
     const { id } = req.params;
