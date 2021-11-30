@@ -7,26 +7,32 @@ const fs = require('fs');
 const json_productos = fs.readFileSync('src/productos.json', 'utf-8'); //leemos el Json
 let productos = JSON.parse(json_productos);
 
-//Metodo GET por id. Si se ingresa mal id, se envian todos los elementos
-router.get(['/', '/:id', '/:cantidad' & '/:desde'], (req, res) => { //envia el json
+//Metodo GET por ID
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    var hay = false;
+    //acá deberia validad de que el id sea un numero
+    _.each(productos, (producto, i) => {
+        if (producto.id == id) {
+            hay = true;
+            res.json(producto);
+        }
+    });
+    if (!hay) {
+        res.status(404).json({ error: 'No existe el ID' });
+    }
+});
+//Metodo GET por rango
+router.get(['/','/:cantidad' & '/:desde'], (req, res) => { //envia el json
     console.log('Parametros query: ', JSON.stringify(req.query));
-    const idProd = req.query.id;
     const cantProd = req.query.cantidad;
     const desdeProd = req.query.desde;
-    if (idProd && !cantProd && !desdeProd) {    //Fue la forma que se me ocurrio de verificar que solo manden id
-        _.each(productos, (producto, id) => {
-            if(producto.id == idProd){
-                res.json(producto);
-            }
-        });
-    } else {
-        if (cantProd && desdeProd && !idProd) {
-            console.log('Se deberia enviar un rango desde:',desdeProd,' - La cantidad de:',cantProd)
-            res.json((productos).slice(desdeProd,JSON.parse(desdeProd)+JSON.parse(cantProd)));
-        } else {
-            res.json(productos);
-            console.log('Se envio: ', productos);
-        }
+    if (cantProd && desdeProd) {
+        console.log('Se deberia enviar un rango desde:', desdeProd, ' - La cantidad de:', cantProd)
+        res.json((productos).slice(desdeProd, JSON.parse(desdeProd) + JSON.parse(cantProd)));
+    }else{
+        res.json(productos);
+        console.log('Se envio: ', productos);
     }
 });
 
