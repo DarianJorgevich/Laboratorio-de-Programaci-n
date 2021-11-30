@@ -15,17 +15,14 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static('public'));
 
-
-//ruta principal
-
 //rutas
-app.use('/',require('./rutas/home'));
-app.use('/api/productos',require('./rutas/productos'));
-
+app.use('/',require('./rutas/home')); //ruta principal
+app.use('/api/productos',require('./rutas/productos')); //ruta de productos 
+ 
 //static 
 app.use(express.static(path.join(__dirname,'public')));
 
 //empezando el servidor
 app.listen(3000, ()=> {
-    console.log(`server on port ${app.get('port')}`); //app lo podemos obtener desde cualquier lado de nuestra aplicacion 
+    console.log(`El server esta en el puerto ${app.get('port')}`); //app lo podemos obtener desde cualquier lado de nuestra aplicacion 
 })
