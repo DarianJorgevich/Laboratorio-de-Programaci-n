@@ -141,3 +141,11 @@ header div {
 .paginador {
     margin-left: 1%;
 }
+
+/*estilo de titulos*/
+.titulo {
+
+    text-align:center;
+    padding: 20px;
+    
+}

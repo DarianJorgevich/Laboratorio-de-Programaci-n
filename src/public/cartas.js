@@ -1,10 +1,8 @@
-var con = 0;
 var divIndex = document.getElementById("cardDiv");
-const cantArticulosXPantalla = 12;
 
-getRango(4,0);
+mostrarCartasIndice(4,0);
 
-function getRango(cantidad, desde) {
+function mostrarCartasIndice(cantidad, desde) {
   fetch(`http://localhost:3000/api/productos?cantidad=${cantidad}&desde=${desde}`) //aca deberia pedirle el json al servidor o la cantidad de elementos que necesita
   .then((res) => {
     return res.json();
