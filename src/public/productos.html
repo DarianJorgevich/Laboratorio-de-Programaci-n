@@ -10,13 +10,13 @@
 
 
 <body>
-  
+
   <header>
-    <div class="logoHeader" >
+    <div class="logoHeader">
       <div><img class="logoImg" src="img/logo_extendido2.jpg" rounded-images></div>
       <div id="search"></div>
     </div>
-    
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -32,12 +32,13 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Insumos</a>
-            </li>  
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="productos.html">Todos los productos</a>
-            </li> 
+            </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Ofertas
               </a>
               <ul class="dropdown-menu">
@@ -47,7 +48,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contacto.html">Contacto</a>
-            </li> 
+            </li>
           </ul>
         </div>
       </div>
@@ -55,72 +56,43 @@
   </header>
 
 
- 
+
 
   <div class="main">
     <!--Acá tengo que poner otro flex para poner tarjetas de productos-->
     <h1><b>Todos los productos</b></h1>
-    
-    <div class="contenido">
-        <!-- Inserto tarjetas con articulos -->
-          <div class="card" style="width: 18rem;">
-            <img src="img/item1.jpg" alt="allInOne-Notebook" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">AIO HP 20-B52LA i3/4GB/1TB</h5>
-              <p class="card-text">PC All-In-One, con monitor LCD 20".</p>
-              <a href="#" class="btn btn-primary">Mas info+</a>
-            </div>
-          </div>
-       
-          <div class="card" style="width: 18rem;">
-            <img src="img/item2.jpg" alt="Note-HP240" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">HP 240 G7 CELERON N4020</h5>
-              <p class="card-text">Procesador Intel Celeron N4020 2.8Ghz - Memoria 4Gb DDR4 - HDD 1Tb - Webcam - Ethernet - WiFi - Pantalla LED 14" - Microsoft Windows 10</p>
-              <a href="#" class="btn btn-primary">Mas info+</a>
-            </div>
-          </div>
 
-          <div class="card" style="width: 18rem;">
-            <img src="img/item3.jpg" alt="Note-DELLA8" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">NOTEBOOK DELL A8 15P 1TB WIN10</h5>
-              <p class="card-text">Portátil de 15,6 pulgadas con AMD Ryzen ™ procesadores móviles con Radeon ™ Vega Graphics, en un diseño portátil, delgado con bordes estrechos.</p>
-              <a href="#" class="btn btn-primary">Mas info+</a>
-            </div>
-          </div>
+    <div class="contenido" id="contenidoProd">
+      <!-- Inserto tarjetas con articulos -->
 
-          <div class="card" style="width: 18rem;">
-            <img src="img/item5.jpg" alt="Note-lenovoThinkPad" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Lenovo ThinkPad L15</h5>
-              <p class="card-text">Intel® Core™ i5-10210U - 8GB - 256GB SSD - 15,6" - Intel® UHD Graphics for 10th Gen Intel® Processors - Ethernet - Wlan+bluetooth - webcam</p>
-              <a href="#" class="btn btn-primary">Mas info+</a>
-            </div>
-          </div>
-
-        <!-- FIN Inserto tarjetas con articulos FIN -->
-      
     </div>
-
+    
+    
     <div class="paginador">
       <nav aria-label="...">
         <ul class="pagination">
-          <li class="page-item disabled">
-            <a class="page-link">Previous</a></li>
-          <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">1</a></li>
-          <li class="page-item">
-            <a class="page-link" href="productos2.html">2</a></li>
-          <li class="page-item">
-            <a class="page-link" href="productos2.html">Next</a></li>
+          <li id="contPrev" class="page-item disabled">
+            <button class="page-link" onclick=prev()>Previous</button>
+            <!--<a class="page-link">Previous</a>-->
+          </li>
+          <li id="contBoton1" class="page-item active" aria-current="page">
+            <button id="boton1" class="page-link" onclick=boton1(5,0)>1</button>
+            <!--<a class="page-link" href="#">1</a></li>-->
+          <li id="contBoton2" class="page-item">
+            <button id="boton2" class="page-link" onclick=boton2(5,5)>2</button>
+            <!--<a class="page-link" href="productos2.html">2</a></li>-->
+          <li id="contNext" class="page-item">
+            <button class="page-link" onclick=next()>Next</button>
+            <!--<a class="page-link" href="productos2.html">Next</a>-->
+          </li>
         </ul>
       </nav>
     </div>
   </div>
 
-
-
+  <script src='./cartas.js'></script>
+  <script src='./paginador.js'></script>
+  
   <footer>
     &copy; Copyright 2021. Todos los derechos reservados. @Authors: San Segundo, Lucas - Jorgevich, Darian.
   </footer>

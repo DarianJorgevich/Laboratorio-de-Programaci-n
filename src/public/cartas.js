@@ -1,6 +1,8 @@
 var divIndex = document.getElementById("cardDiv");
+var divProdu = document.getElementById("contenidoProd");
 
 mostrarCartas(4,0,divIndex);
+mostrarCartas(5,0,divProdu);  //CORREGIR fué la unica forma que encontré para cargar la pagina inicial de productos
 
 function mostrarCartas(cantidad, desde, unDiv) { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
   fetch(`http://localhost:3000/api/productos?cantidad=${cantidad}&desde=${desde}`) //le pedimos a la API la cantidad de productos que necesitamos
@@ -12,27 +14,10 @@ function mostrarCartas(cantidad, desde, unDiv) { //funcion que va a mostrar una 
   })
 }
 
-/*
-function getRango(cantidad, desde) {
-  const http = new XMLHttpRequest();
-  const idProd = 1;
-  const url = `http://localhost:3000/api/productos?cantidad=${cantidad}&desde=${desde}`;
-
-  http.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log('Datos obtenidos con getRango(): ',this.response);
-      ubicarCartas(this.response, divIndex, 0, cantidad)
-    }
-  }
-  http.open("GET", url);
-  http.send();
-}*/
-
 //esta funcion muestra las cartas de el json
 //como parametros esta el arreglo de productos, el div que queremos, el primer numero del arreglo y el ultimo que querramos
 function ubicarCartas(productos, unDiv, desde, hasta) {
-  //var hasta = (productos).length; 
-  //console.log('hasta: ',hasta);
+  unDiv.innerHTML='';
   for (desde; desde < hasta; desde++) {
     unDiv.innerHTML += ` 
             <div class="card">
