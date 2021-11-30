@@ -1,0 +1,28 @@
+{
+  "name": "laboratorio-de-programaci-n",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "dev": "nodemon src/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarianJorgevich/Laboratorio-de-Programaci-n.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarianJorgevich/Laboratorio-de-Programaci-n/issues"
+  },
+  "homepage": "https://github.com/DarianJorgevich/Laboratorio-de-Programaci-n#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
