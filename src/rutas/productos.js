@@ -10,7 +10,7 @@ let productos = JSON.parse(json_productos);
 //Metodo GET por ID
 router.get('/:id', (req, res) => {
     const { id } = req.params;
-    var pos = validarID(id); //verificamos si existe el ID
+    var pos = validarID(id,productos); //verificamos si existe el ID y nos devuelve la posicion en el arreglo productos
     if (pos == -1) {
         res.status(404).json({ error: 'No existe el ID' });
     }
@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
         productos.push(newProducto); //colocaos el nuevo producto en el arreglo de productos
 
         //escribimos en memoria el nuevo JSON, en caso de error se notifica
-        if (escritura()) {
+        if (escritura(productos)) {
             console.log("El dato se ha escrito en el archivo");
             console.log(newProducto);
             res.send(newProducto);
@@ -57,7 +57,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
     const { id } = req.params;
-    var pos = validarID(id);
+    var pos = validarID(id,productos);
     //validamos el ID
     if (pos == -1) {
         res.status(404).json({ error: 'No existe el ID' });
@@ -72,7 +72,7 @@ router.put('/:id', async (req, res) => {
             productos[pos].alt = alt;
 
             //escribimos en memoria el nuevo JSON, en caso de error se notifica
-            if (escritura()) {
+            if (escritura(productos)) {
                 res.json(productos);
             }
 
@@ -92,7 +92,7 @@ function validarProducto(titulo, desc, ubicacion, alt) {
     return esCorrecto;
 }
 
-function validarID(unID) {
+function validarID(unID, productos) {
     //metodo para validar un ID en el JSON productos
     //devuelve la posicion del arreglo donde esta el ID
     //si el ID es -1 quiere decir que no lo encontro
@@ -108,7 +108,7 @@ function validarID(unID) {
 
 //esta funcion escribe los cambios en el arreglo de productos a memoria
 //retorna un valor booleando que nos dice si fue escrito o no con exito
-function escritura() {
+function escritura(productos) {
     var correcto = true;
     const json_productos = JSON.stringify(productos);
     fs.writeFile('src/productos.json', json_productos, (err) => {
