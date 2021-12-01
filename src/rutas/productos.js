@@ -21,7 +21,6 @@ router.get('/:id', (req, res) => {
 
 //Metodo GET por rango
 router.get(['/', '/:cantidad' & '/:desde'], (req, res) => { //envia el json
-    console.log('Parametros query: ', JSON.stringify(req.query));
     const cantProd = req.query.cantidad;
     const desdeProd = req.query.desde;
     if (cantProd && desdeProd) {
