@@ -11,8 +11,8 @@
 
 <body>
 
-  <header>
-    <div class="logoHeader">
+  <header id="headerTag">
+    <!--<div class="logoHeader">
       <div><img class="logoImg" src="img/logo_extendido2.jpg" rounded-images></div>
       <div id="search"></div>
     </div>
@@ -52,7 +52,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>-->
   </header>
 
 
@@ -73,26 +73,19 @@
         <ul class="pagination">
           <li id="contPrev" class="page-item disabled">
             <button class="page-link" onclick=prev()>Previous</button>
-            <!--<a class="page-link">Previous</a>-->
           </li>
           <li id="contBoton1" class="page-item active" aria-current="page">
             <button id="boton1" class="page-link" onclick=boton1(5,0)>1</button>
-            <!--<a class="page-link" href="#">1</a></li>-->
           <li id="contBoton2" class="page-item">
             <button id="boton2" class="page-link" onclick=boton2(5,5)>2</button>
-            <!--<a class="page-link" href="productos2.html">2</a></li>-->
           <li id="contNext" class="page-item">
             <button class="page-link" onclick=next()>Next</button>
-            <!--<a class="page-link" href="productos2.html">Next</a>-->
           </li>
         </ul>
       </nav>
     </div>
   </div>
 
-  <script src='./cartas.js'></script>
-  <script src='./paginador.js'></script>
-  
   <footer>
     &copy; Copyright 2021. Todos los derechos reservados. @Authors: San Segundo, Lucas - Jorgevich, Darian.
   </footer>
@@ -101,6 +94,9 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <!-- FIN Script para el uso de bootstrap FIN-->
+  <script src='./cartas.js'></script>
+  <script src='./paginador.js'></script>
+  <script src='./header.js'></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@ var divIndex = document.getElementById("cardDiv");
 var divProdu = document.getElementById("contenidoProd");
 
 mostrarCartas(4,0,divIndex);
-mostrarCartas(5,0,divProdu);  //CORREGIR fué la unica forma que encontré para cargar la pagina inicial de productos
+mostrarCartas(5,0,divProdu); 
 
 function mostrarCartas(cantidad, desde, unDiv) { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
   fetch(`http://localhost:3000/api/productos?cantidad=${cantidad}&desde=${desde}`) //le pedimos a la API la cantidad de productos que necesitamos
