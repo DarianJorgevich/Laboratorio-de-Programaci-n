@@ -1,5 +1,6 @@
 function validarProducto(titulo, desc, ubicacion, alt) {
     //se valida los campos que tiene el producto
+    //tiene que estar correctos todos los campos: titulo, descripcion del producto, ubicacion de la foto y alt.
     var esCorrecto = true;
     if (!titulo || !desc || !ubicacion || !alt) {
         esCorrecto = false;
