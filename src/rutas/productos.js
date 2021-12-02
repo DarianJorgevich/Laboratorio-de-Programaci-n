@@ -36,7 +36,7 @@ router.get(['/', '/:cantidad' & '/:desde'], (req, res) => { //envia el json
 
 
 
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
     const { titulo, desc, ubicacion, alt } = req.body;
     if (validarProducto(titulo, desc, ubicacion, alt)) { //validacion 
         const id = productos.length + 1; //asignamos el ID del nuevo producto
@@ -52,11 +52,11 @@ router.post('/', async (req, res) => {
     }
     else {
 
-        res.status(500).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
+        res.status(400).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
     }
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', (req, res) => {
     const { id } = req.params;
     var pos = validarID(id,productos);
     //validamos el ID
@@ -79,7 +79,7 @@ router.put('/:id', async (req, res) => {
 
         }
         else {
-            res.status(500).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
+            res.status(400).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
         }
     }
 })
