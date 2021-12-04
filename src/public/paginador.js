@@ -12,23 +12,28 @@ var ultimoItemActual = 0;
 
 boton1();   //Para cargar la pagina inicialmente
 
+//--------------Prueba mejora paginador
+pedirTotal();
+//--------------FIN Prueba mejora paginador
+
+
 function boton1() {
     pagActual = 1;
-    ultimoItemActual = (pagActual-1)*itemsPorPag; //Para setear el inicio desde donde tomar los datos 
+    ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos 
     configBotones();
     mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
-    ultimoItemActual = ultimoItemActual + itemsPorPag;  
+    ultimoItemActual = ultimoItemActual + itemsPorPag;
 }
 function boton2() {
     pagActual = 2;
-    ultimoItemActual = (pagActual-1)*itemsPorPag; //Para setear el inicio desde donde tomar los datos 
+    ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos 
     configBotones();
     mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
     ultimoItemActual = ultimoItemActual + itemsPorPag;
 }
 function boton3() {
     pagActual = 3;
-    ultimoItemActual = (pagActual-1)*itemsPorPag; //Para setear el inicio desde donde tomar los datos 
+    ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos 
     configBotones();
     mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
     ultimoItemActual = ultimoItemActual + itemsPorPag;
@@ -91,3 +96,16 @@ function configBotones() {
             break;
     }
 }
+
+//--------------Prueba mejora paginador
+function pedirTotal() { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
+    fetch(`http://localhost:3000/api/productos?numTotal=0`)
+        .then((res) => {
+            return res.json();
+        })
+        .then((post) => {
+            //ubicarCartas(post, unDiv, 0, cantidad);
+            console.log('total de productos: ',post);
+        })
+}
+//--------------FIN Prueba mejora paginador

@@ -12,7 +12,7 @@ let productos = JSON.parse(json_productos);
 //Metodo GET por ID
 router.get('/:id', (req, res) => {
     const { id } = req.params;
-    var pos = validarID(id,productos); //verificamos si existe el ID y nos devuelve la posicion en el arreglo productos
+    var pos = validarID(id, productos); //verificamos si existe el ID y nos devuelve la posicion en el arreglo productos
     if (pos == -1) {
         res.status(404).json({ error: 'No existe el ID' });
     }
@@ -22,15 +22,20 @@ router.get('/:id', (req, res) => {
 });
 
 //Metodo GET por rango
-router.get(['/', '/:cantidad' & '/:desde'], (req, res) => { //envia el json
+router.get(['/', '/:cantidad' & '/:desde', '/:numTotal'], (req, res) => { //envia el json
     const cantProd = req.query.cantidad;
     const desdeProd = req.query.desde;
+    const totalProd = req.query.numTotal;
     if (cantProd && desdeProd) {
-        console.log('Se deberia enviar un rango desde:', desdeProd, ' - La cantidad de:', cantProd)
+        //console.log('Se deberia enviar un rango desde:', desdeProd, ' - La cantidad de:', cantProd)
         res.json((productos).slice(desdeProd, JSON.parse(desdeProd) + JSON.parse(cantProd)));
     } else {
-        res.json(productos);
-        console.log('Se envio: ', productos);
+        if (totalProd) {
+            res.json(productos.length);
+        } else {
+            res.json(productos);
+            //console.log('Se envio: ', productos);
+        }
     }
 });
 
@@ -58,7 +63,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
     const { id } = req.params;
-    var pos = validarID(id,productos);
+    var pos = validarID(id, productos);
     //validamos el ID
     if (pos == -1) {
         res.status(404).json({ error: 'No existe el ID' });
@@ -97,7 +102,7 @@ function validarProducto(titulo, desc, ubicacion, alt) {
     return esCorrecto;
 }
 
- function validarID(unID, productos) {
+function validarID(unID, productos) {
     //metodo para validar un ID en el JSON productos
     //devuelve la posicion del arreglo donde esta el ID
     //si el ID es -1 quiere decir que no lo encontro
