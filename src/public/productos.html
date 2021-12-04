@@ -7,17 +7,11 @@
   <link href="styles.css" rel="stylesheet">
 </head>
 
-
-
 <body>
-
   <header id="headerTag">
     <!-- Header -->
   </header>
-
-
-
-
+  
   <div class="main">
     <!--Acá tengo que poner otro flex para poner tarjetas de productos-->
     <div class="titulo">
@@ -27,24 +21,18 @@
     <div class="border-top">
       <div class="contenido" id="contenidoProd">
         <!-- Inserto tarjetas con articulos -->
-
       </div>
     </div>
-
-
 
     <div class="paginador">
       <nav aria-label="...">
         <ul class="pagination">
-          <li id="contPrev" class="page-item disabled">
+          <li id="contPrev" class="page-item">
             <button class="page-link" onclick=prev()>Previous</button>
           </li>
-          <li id="contBoton1" class="page-item active" aria-current="page">
-            <button id="boton1" class="page-link" onclick=boton1()>1</button>
-          <li id="contBoton2" class="page-item">
-            <button id="boton2" class="page-link" onclick=boton2()>2</button>
-          <li id="contBoton3" class="page-item">
-            <button id="boton3" class="page-link" onclick=boton3()>3</button>
+          <ul id="botonesPag" class="pagination">
+            <!-- Inserto cantida de botones acorde a cant items/paginas -->
+          </ul>
           <li id="contNext" class="page-item">
             <button class="page-link" onclick=next()>Next</button>
           </li>
@@ -61,6 +49,8 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <!-- FIN Script para el uso de bootstrap FIN-->
+  
+  <!-- Corregir: tendria que hacer los export que vimos en la clase. No se si en header.js es necesario tambien-->
   <script src='./cartas.js'></script>
   <script src='./paginador.js'></script>
   <script src='./header.js'></script>

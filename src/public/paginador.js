@@ -5,107 +5,59 @@ const botPrev = document.getElementById("contPrev");
 const botNext = document.getElementById("contNext");
 const divContenido = document.getElementById("contenidoProd");
 
-var pagActual = 1;
-const cantPaginas = 3;
-const itemsPorPag = 5;
+var pagActual = 0;
+var cantPaginas;
+const itemsPorPag = 3;
 var ultimoItemActual = 0;
 
-boton1();   //Para cargar la pagina inicialmente
+configPaginas();    //configura cantidad de paginas y botones
 
-//--------------Prueba mejora paginador
-pedirTotal();
-//--------------FIN Prueba mejora paginador
-
-
-function boton1() {
-    pagActual = 1;
-    ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos 
-    configBotones();
-    mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
-    ultimoItemActual = ultimoItemActual + itemsPorPag;
-}
-function boton2() {
-    pagActual = 2;
-    ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos 
-    configBotones();
-    mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
-    ultimoItemActual = ultimoItemActual + itemsPorPag;
-}
-function boton3() {
-    pagActual = 3;
-    ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos 
-    configBotones();
-    mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
-    ultimoItemActual = ultimoItemActual + itemsPorPag;
-}
+boton(1);   //Para cargar la pagina inicialmente
 
 function prev() {
-    switch (pagActual) {
-        case 1:
-            break;
-        case 2:
-            boton1();
-            break;
-        case 3:
-            boton2();
-            break;
-        default:
-            break;
+    var proxPag = pagActual - 1;
+    if (proxPag <= 0) {
+        proxPag = 1;            //Para evitar que se pase de rango
     }
+    boton(proxPag);
 }
 function next() {
-    switch (pagActual) {
-        case 1:
-            boton2();
-            break;
-        case 2:
-            boton3();
-            break;
-        case 3:
-            break;
-        default:
-            break;
+    var proxPag = pagActual + 1;
+    if (proxPag > cantPaginas) {
+        proxPag = cantPaginas;  //Para evitar que se pase de rango
+    }
+    boton(proxPag);
+}
+
+function boton(idPagina) {
+    if (idPagina != pagActual) {
+        pagActual = idPagina;
+        ultimoItemActual = (pagActual - 1) * itemsPorPag; //Para setear el inicio desde donde tomar los datos
+        mostrarCartas(itemsPorPag, ultimoItemActual, divContenido);
+        ultimoItemActual = ultimoItemActual + itemsPorPag;
     }
 }
 
-function configBotones() {
-    //Funcion para configurar la habilitacion/deshabilitacion de botones
-    switch (pagActual) {
-        case 1:
-            bot1.className = "page-item active";
-            bot2.className = "page-item";
-            bot3.className = "page-item";
-            botPrev.className = "page-item disabled";
-            botNext.className = "page-item";
-            break;
-        case 2:
-            bot1.className = "page-item";
-            bot2.className = "page-item active";
-            bot3.className = "page-item";
-            botPrev.className = "page-item";
-            botNext.className = "page-item";
-            break;
-        case 3:
-            bot1.className = "page-item";
-            bot2.className = "page-item";
-            bot3.className = "page-item active";
-            botPrev.className = "page-item";
-            botNext.className = "page-item disable";
-            break;
-        default:
-            break;
-    }
-}
-
-//--------------Prueba mejora paginador
-function pedirTotal() { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
+function configPaginas() { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
     fetch(`http://localhost:3000/api/productos?numTotal=0`)
         .then((res) => {
             return res.json();
         })
         .then((post) => {
-            //ubicarCartas(post, unDiv, 0, cantidad);
-            console.log('total de productos: ',post);
+            console.log('total de productos: ', post);
+            setCantPaginas(post);
+            setBotonesEnHtml(cantPaginas);
         })
 }
-//--------------FIN Prueba mejora paginador
+function setCantPaginas(total) {
+    cantPaginas = total / itemsPorPag;
+    cantPaginas = Math.ceil(cantPaginas);
+}
+function setBotonesEnHtml(paginas) {
+    var unDiv = document.getElementById("botonesPag");
+    for (i = 1; i <= paginas; i++) {
+        unDiv.innerHTML +=
+            `<li class="page-item" aria-current="page">
+        <button class="page-link" onclick=boton(${i})>${i}</button>`
+    }
+}
