@@ -6,7 +6,7 @@ const fs = require('fs');
 
 let vali = require('./validacion.js'); //variable que nos dan los metodos de validacion de datos 
 let mani = require('./manipulacion.js'); //variable que nos dan los metodos de creacion y modificacion de datos 
-const json_productos = fs.readFileSync('src/productos.json', 'utf-8'); //leemos el Json
+const json_productos = fs.readFileSync('src/productos.json', 'utf-8'); //leemos el archivo
 let productos = JSON.parse(json_productos); 
 
 //Metodo GET por ID
