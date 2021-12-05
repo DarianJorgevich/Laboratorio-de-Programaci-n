@@ -7,7 +7,7 @@ const divContenido = document.getElementById("contenidoProd");
 
 var pagActual = 0;
 var cantPaginas;
-const itemsPorPag = 3;
+const itemsPorPag = 4;
 var ultimoItemActual = 0;
 
 configPaginas();    //configura cantidad de paginas y botones
