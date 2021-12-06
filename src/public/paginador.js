@@ -1,8 +1,3 @@
-const bot1 = document.getElementById("contBoton1");
-const bot2 = document.getElementById("contBoton2");
-const bot3 = document.getElementById("contBoton3");
-const botPrev = document.getElementById("contPrev");
-const botNext = document.getElementById("contNext");
 const divContenido = document.getElementById("contenidoProd");
 
 var pagActual = 0;
