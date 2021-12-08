@@ -16,7 +16,7 @@ function escribirArreglo(productos, req){
     
 }
 
-function modificarArreglo(productos, pos, titulo, desc, ubicacion, alt){
+function modificarArreglo(productos, pos, titulo, desc, ubicacion, alt, tipo){
     //funcion para modificar un elemento del arreglo
     //retorna true si se pudo efectuar todo el metodo correctamente
     var correcto = false;
@@ -24,6 +24,7 @@ function modificarArreglo(productos, pos, titulo, desc, ubicacion, alt){
     productos[pos].desc = desc;
     productos[pos].ubicacion = ubicacion;
     productos[pos].alt = alt;
+    productos[pos].tipo = tipo;
 
     //escribimos en memoria el nuevo JSON, en caso de error se notifica
     if (escritura(productos)) {

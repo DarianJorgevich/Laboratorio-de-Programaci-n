@@ -3,7 +3,7 @@ var divIndex = document.getElementById("cardDiv");
 mostrarCartas(4, 0, divIndex);
 
 function mostrarCartas(cantidad, desde, unDiv) { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
-  fetch(`http://localhost:3000/api/productos?cantidad=${cantidad}&desde=${desde}`) //le pedimos a la API la cantidad de productos que necesitamos
+  fetch(`http://localhost:3000/api/productos?cantidad=${cantidad}&desde=${desde}&tipo=producto`) //le pedimos a la API la cantidad de productos que necesitamos
     .then((res) => {
       return res.json();
     })

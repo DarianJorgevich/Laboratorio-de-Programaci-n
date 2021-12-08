@@ -1,11 +1,11 @@
 const _ = require('underscore');
 const fs = require('fs');
 
-function validarProducto(titulo, desc, ubicacion, alt) {
+function validarProducto(titulo, desc, ubicacion, alt, tipo) {
     //se valida los campos que tiene el producto
     //tiene que estar correctos todos los campos: titulo, descripcion del producto, ubicacion de la foto y alt.
     var esCorrecto = true;
-    if (!titulo || !desc || !ubicacion || !alt) {
+    if (!titulo || !desc || !ubicacion || !alt || !tipo) {
         esCorrecto = false;
     }
     return esCorrecto;
@@ -28,6 +28,17 @@ function validarID(unID, productos) {
     return pos;
 };
 
+function filtrarPorTipo (tipo, productos){
+    let nuevoArr = []
+    _.each(productos, (producto) => {
+        //va agregando al nuevo arreglo productos con el tipo pasado por parametro
+        if (producto.tipo == tipo) {
+            nuevoArr.push(producto);
+        };
+    });
+    return nuevoArr;
+}
+
 function validarNumero(num) {
     //funcion que verifica si un string pasado por parametro es un numero
     return !isNaN(parseInt(num, 10));
@@ -38,5 +49,6 @@ function validarNumero(num) {
 module.exports = {
     validarProducto,
     validarID,
-    validarNumero
+    validarNumero,
+    filtrarPorTipo
 }

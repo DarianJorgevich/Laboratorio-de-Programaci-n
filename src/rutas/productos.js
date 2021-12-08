@@ -23,14 +23,28 @@ router.get('/:id', (req, res) => {
 });
 
 //Metodo GET por rango
-router.get(['/', '/:cantidad' & '/:desde', '/:numTotal'], (req, res) => { //envia el json
+router.get(['/', '/:cantidad' & '/:desde' & '/:tipo', '/:numTotal'& '/:tipo', '/:tipo'], (req, res) => { //envia el json
     const cantProd = req.query.cantidad;
     const desdeProd = req.query.desde;
+    const tipoProd = req.query.tipo;
     const totalProd = req.query.numTotal;
+
+    let arr;
+     //si hay asignado a un tipo, se crea un nuevo array con los productos segun su tipo
+     if(tipoProd){ 
+        arr= vali.filtrarPorTipo(tipoProd, productos);
+    }
+    //si no se asigna un tipo en la consulta
+    //se toma a todo el json de productos
+    else{
+       arr=productos
+    }
+    
     if(cantProd && desdeProd){
+        //validamos de que sean numeros la cantidad y desde
         if (vali.validarNumero(cantProd) && vali.validarNumero(desdeProd)) {
             //console.log('Se deberia enviar un rango desde:', desdeProd, ' - La cantidad de:', cantProd)
-            res.json((productos).slice(desdeProd, JSON.parse(desdeProd) + JSON.parse(cantProd)));
+            res.json((arr).slice(desdeProd, JSON.parse(desdeProd) + JSON.parse(cantProd)));
         }
         else{
             res.status(400).json({ error: 'Error al validar datos, recuerde que cantidad y desde son numeros enteros' });
@@ -40,13 +54,13 @@ router.get(['/', '/:cantidad' & '/:desde', '/:numTotal'], (req, res) => { //envi
         if (totalProd) {
             //si se consulta la longitud
             if(vali.validarNumero(totalProd)){
-                res.json(productos.length);
+                res.json(arr.length);
             }else{
                 res.status(400).json({ error: 'Error al validar datos, recuerde que el numTotal es un numero' });
             }
         } else {
             //si es un get comun se envian todos los elementos del json
-            res.json(productos);
+            res.json(arr);
             //console.log('Se envio: ', productos);
         }
     }
@@ -55,16 +69,16 @@ router.get(['/', '/:cantidad' & '/:desde', '/:numTotal'], (req, res) => { //envi
 
 
 router.post('/', (req, res) => {
-    const { titulo, desc, ubicacion, alt } = req.body;
+    const { titulo, desc, ubicacion, alt, tipo } = req.body;
     //validacion 
-    if (vali.validarProducto(titulo, desc, ubicacion, alt)) { 
+    if (vali.validarProducto(titulo, desc, ubicacion, alt, tipo)) { 
         mani.escribirArreglo(productos, req.body);
         //el elemento que se crea siempre es el ultimo del arreglo.
         var ultimoElem= productos.length - 1; 
         res.json(productos[ultimoElem]);
     }
     else {
-        res.status(400).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
+        res.status(400).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion, alt y tipo' });
     }
 })
 
@@ -76,16 +90,16 @@ router.put('/:id', (req, res) => {
         res.status(404).json({ error: 'No existe el ID' });
     }
     else {
-        const { titulo, desc, ubicacion, alt } = req.body;
+        const { titulo, desc, ubicacion, alt, tipo } = req.body;
         //validamos los datos, si esta todo bien, se modifica el elemento
-        if (vali.validarProducto(titulo, desc, ubicacion, alt)) {
+        if (vali.validarProducto(titulo, desc, ubicacion, alt, tipo)) {
             //verificamos si se pudo modificar con exito
-            if (mani.modificarArreglo(productos,pos,titulo, desc, ubicacion, alt)){ 
+            if (mani.modificarArreglo(productos,pos,titulo, desc, ubicacion, alt, tipo)){ 
                 res.json(productos[pos]);
             }
         }
         else {
-            res.status(400).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion y alt' });
+            res.status(400).json({ error: 'Error al validar datos, recuerde que debe cargar titulo, desc, ubicacion, alt y tipo' });
         }
     }
 })

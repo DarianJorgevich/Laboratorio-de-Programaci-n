@@ -34,7 +34,7 @@ function boton(idPagina) {
 }
 
 function configPaginas() { //funcion que va a mostrar una cantidad de cards desde algun punto del arreglo
-    fetch(`http://localhost:3000/api/productos?numTotal=0`)
+    fetch(`http://localhost:3000/api/productos?numTotal=0&tipo=producto`)
         .then((res) => {
             return res.json();
         })
