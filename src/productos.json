@@ -65,19 +65,27 @@
     },
     {
         "id": 9,
-        "titulo": "Contactos presentacion",
-        "desc": "Foto para el carrusel",
-        "ubicacion": "img/contactoCarrousel.png",
-        "alt": "Contactos carrusel",
+        "titulo": "Ofertas de navidad presentacion",
+        "desc": "Foto para carrusel, ofertas de navidad",
+        "ubicacion": "img/Carr-ofertasDeNavidad.png",
+        "alt": "Oferta de navidad carrusel",
         "tipo": "carrusel"
+        
     },
     {
         "id": 10,
         "titulo": "Dia de la madre presentacion",
         "desc": "Foto para carrusel, ofertas del dia de la madre",
-        "ubicacion": "img/diaMadreCarrousel.png",
+        "ubicacion": "img/Carr-diaMadreCarrousel.png",
         "alt": "Dia de la madre carrusel",
         "tipo": "carrusel"
-    }  
-    
+    },
+    {
+        "id": 11,
+        "titulo": "Contactos presentacion",
+        "desc": "Foto para el carrusel",
+        "ubicacion": "img/Carr-contactoCarrousel.png",
+        "alt": "Contactos carrusel",
+        "tipo": "carrusel"
+    }
 ]
